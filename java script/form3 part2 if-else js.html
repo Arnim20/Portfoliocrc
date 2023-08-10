@@ -1,0 +1,126 @@
+<!--Create a form-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Form</title>
+    <style>
+        .conatiner{
+           margin: 10px 50px 20px 10px;
+           background-color: rgb(9, 243, 44);
+           padding: 10px 20px 10px;
+        }
+        .h1{
+            text-align: center;
+        }
+        .bt{
+                margin-left: 500px;
+                padding: 10px 50px 10px;
+        }
+    </style>
+    <script>
+        function val()
+        {
+            let x=document.getElementById("pass");
+            let y=document.getElementById("repass");
+          if(x.value != y.value)
+          {
+            document.getElementById("re").innerHTML="Re enter Password";
+            document.getElementById("re").style.color="red";
+          }
+          else
+          {
+            document.getElementById("re").innerHTML="Passowrd Match"
+          }
+        }
+    </script>
+</head>
+<body>
+  
+    <div class="conatiner form-control">
+          <!--Heading Start-->
+        <div class="h1">
+            <h1>Registration Form</h1>
+        </div>
+        <!--Heading End-->
+   
+    
+    <!--Form Start-->
+    <form class="form-control">
+    <legend>Login Details</legend> 
+        <div >
+            <label class=" mt-2">Email</label>
+            <input type="email" class="form-control" required placeholder="mail@gmial.com">
+        </div>
+        <div >
+            <label class=" mt-2">Password</label>
+            <input type="password" class="form-control" id="pass" required placeholder="Password">
+        </div>
+        <div >
+            <label class=" mt-2">Re-Enter Password</label>
+            <input type="password" onchange="val()"  class="form-control" id="repass" required placeholder="Re-Enter Password">
+            <p id="re"></p>
+        </div>
+        
+            <legend>Personal Information</legend>
+
+        <div >
+            <label class=" mt-2">Enter Your Name</label>
+            <input type="text" class="form-control" required placeholder="Enter Your Name">
+        </div>
+        <div >
+            <label class=" mt-2">Roll-Number</label>
+            <input type="number" class="form-control" required placeholder="Roll-Number">
+        </div>
+        <div >
+            <label class=" mt-2">Mobile Number</label>
+            <input type="number" class="form-control" required placeholder="Mobile Number">
+        </div>
+       <div>
+        <div class="mt-2">
+            <label class="visually" for="autoSizingSelect">Branch</label>
+            <select class="form-select" id="autoSizingSelect">
+              <option selected>Choose...</option>
+              <option value="1">CSE</option>
+              <option value="2">AI</option>
+              <option value="3">DS</option>
+              <option value="3">IOT</option>
+              <option value="3">IT</option>
+            </select>
+        </diV>
+          <label class="mt2">Selectin</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">A</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">B</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+            <label class="form-check-label" for="inlineRadio3">C</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+             I have read and agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+            <br>
+            <div class="mt-2 bt">
+                <button id="b1" class="bg-secondary bt1 " style="margin-left: 20px;"><input id="b1" type="submit" class="form-control bg-secondary" value="submit"> </button> 
+                <button id="b2" class="bg-secondary bt1 " style="margin-left: 20px;"> <input type="reset" class="form-control bg-secondary" value="reset"></button>
+
+            </div>
+
+    </form>
+    <!--Form End-->
+</div>
+</body>
+</html>

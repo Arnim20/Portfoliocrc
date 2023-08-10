@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--div id="d1">
+        <h1>this is the first heading</h1>
+    </div>
+    <div id="d2">
+        <p id="p1">this is a para</p>
+    </div> -->
+    <div id="d1">
+        <table id="table"></table>
+    </div>
+    <div>
+        <button onclick="abc()">add para</button>
+    </div>
+    <!--form>
+        <label>name</label>
+        <input type="text" id="name" />
+    </form>
+    <p id="p1" onmouseover="abc()">this is a para</p> -->
+    <script>
+       /* let x = document.getElementById('p1');
+        console.log(x);
+        document.write(x.innerText); */
+       /* function abc(){
+            console.log('hi');
+            let x = document.getElementById('p1');
+            x.innerText = "arnim";
+        } */
+        /*function abc(){
+            let x = document.createElement("p");
+            x.innerText = "this is an added para by button"; 
+            document.getElementById("d1").appendChild(x);
+        } */
+        function abc(){
+            let row = document.createElement('tr');
+            let cell1 = document.createElement('td');
+            cell1.innerText = "arnim";
+            row.style.color = "red"
+            row.appendChild(cell1);
+            document.getElementById('table').appendChild(row);
+        }
+    </script>
+</body>
+</html>

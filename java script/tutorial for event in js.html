@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" onclick="abc(this)">welcome</h1>
+    <p id="p1" onclick="abc(this)">i am para</p>
+    <button onclick="abc(this)">click me</button>
+
+    <script>
+        function abc(obj) {
+            document.getElementById("h1").innerText="hello";
+            document.getElementById("p1").innerText="buddy";
+            //obj.innerText="hi";
+        }
+    </script>
+</body>
+</html>

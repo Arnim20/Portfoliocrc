@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        var masterdatabase=[
+       {email:"sahil",password:"sahil"},
+       {email:"priynak",password:"priyank"},
+       {email:"sarthak",password:"sarthak"},
+       {email:"priya",password:"priya"},
+       {email:"ansh",passowrd:"ansh"}
+        ]
+        function submit1(){
+            let em=document.getElementById("user").value;
+            em=em.toLowerCase();
+            let pass=document.getElementById("pass").value;
+                 for(let obj of masterdatabase )
+                {   console.log(em);
+                    console.log(pass);
+                    if(obj["email"]==em && obj["password"]==pass)
+                    {
+                        let x=document.getElementById("para").innerHTML="Sucessfull login";
+                        break;
+                    }
+                    else
+                    {
+                        let x=document.getElementById("para").innerHTML="worng Id or Password";
+                        break;
+                    }
+                }   
+        }
+        function reset2(){
+           document.getElementById("user").value="";
+           document.getElementById("pass").value="";
+        }
+      </script>           
+</head>
+<body>
+        <!--Navbar start-->
+        <div class="section">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid ">
+                <a class="navbar-brand fs-3" href="#">Sahil Thakur</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent" >
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " style="margin-right: 20px; ">
+                    <li class="nav-item px-3">
+                      <a class="nav-link active" aria-current="page" href="../layout/index.html">Home</a>
+                    </li>
+                    <li class="nav-item  px-3">
+                      <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item  px-3">
+                      <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <div class="btn-group  px-3">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Project's
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="../layout/index.html#">Week-1</a></li>
+                        <li><a class="dropdown-item" href="../layout/index.html#">Week-2</a></li>
+                        <li><a class="dropdown-item" href="../layout/index.html#">Week-3</a></li>
+                      </ul>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+      </div>
+      <!--Navbar End-->
+    <div class="conatiner" style="width: 500px; height:400px; margin-left:500px; margin-top:80px; background-color:aqua; padding:30px 20px 20px;">
+        <form>
+            <h2 style="text-align: center;">LOGIN</h2>
+            <div class="mb-3">
+              <label for="exampleInputEmail1"  class="form-label">Email address</label>
+              <input type="email"  class="form-control" id="user" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pass">
+            </div>
+            <button type="button" onclick="submit1()" class="btn btn-primary">Submit</button>
+            <button type="button" onclick="reset2()"  class="btn btn-primary">Reset</button>
+          </form>
+          <div>
+            <p id="para"></p>
+          </div>
+    </div>
+</body>
+</html>

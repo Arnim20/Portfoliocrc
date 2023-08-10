@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        <table id="table"></table>
+    </div>
+    <div>
+        <button onclick="abc()">add para</button>
+    </div>
+    <script>
+        let x = {name:'arnim', age:21, number:701760038};
+        function abc(){
+            for( let k in x){
+                let row = document.createElement('tr');
+            let cell1 = document.createElement('td');
+            cell1.innerText = x[k];
+            row.style.color = "red"
+            row.appendChild(cell1);
+            document.getElementById('table').appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>
